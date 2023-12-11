@@ -24,6 +24,8 @@ import org.springframework.lang.Nullable;
 /**
  * A strategy interface for retrieving and saving FlashMap instances.
  * See {@link FlashMap} for a general overview of flash attributes.
+ * 用于检索和保存FlashMap实例的策略接口。
+ * 参见{@link FlashMap}了解flash属性的总体概述。
  *
  * @author Rossen Stoyanchev
  * @since 3.1
