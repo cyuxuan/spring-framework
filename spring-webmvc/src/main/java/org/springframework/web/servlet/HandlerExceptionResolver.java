@@ -25,10 +25,16 @@ import org.springframework.lang.Nullable;
  * Interface to be implemented by objects that can resolve exceptions thrown during
  * handler mapping or execution, in the typical case to error views. Implementors are
  * typically registered as beans in the application context.
+ * 过程中抛出的异常将由对象实现
+ * 处理程序映射或执行，在典型情况下到错误视图。实现者是
+ * 通常在应用程序上下文中注册为bean。
  *
  * <p>Error views are analogous to JSP error pages but can be used with any kind of
  * exception including any checked exception, with potentially fine-grained mappings for
  * specific handlers.
+ * <p>错误视图类似于JSP错误页面，但可以用于任何类型的
+ * 异常，包括任何已检查异常，具有潜在的细粒度映射
+ * 具体的处理程序。
  *
  * @author Juergen Hoeller
  * @since 22.11.2003

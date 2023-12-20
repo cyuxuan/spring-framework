@@ -21,6 +21,9 @@ import org.springframework.lang.Nullable;
 /**
  * Interface to be implemented by bean metadata elements
  * that carry a configuration source object.
+ * 接口将由携带配置源对象的bean元数据元素实现。
+ *
+ * 作用是获取bd对应的class的磁盘文件位置
  *
  * @author Juergen Hoeller
  * @since 2.0

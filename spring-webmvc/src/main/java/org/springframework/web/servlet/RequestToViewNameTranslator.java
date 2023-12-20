@@ -24,6 +24,9 @@ import org.springframework.lang.Nullable;
  * Strategy interface for translating an incoming
  * {@link javax.servlet.http.HttpServletRequest} into a
  * logical view name when no view name is explicitly supplied.
+ * 翻译传入消息的策略接口
+ * {@link javax.servlet.http。HttpServletRequest}转换成
+ * 当没有显式提供视图名称时，使用逻辑视图名称。
  *
  * @author Rob Harrop
  * @author Juergen Hoeller

@@ -25,20 +25,29 @@ import org.springframework.lang.Nullable;
  * Interface for web-based theme resolution strategies that allows for
  * both theme resolution via the request and theme modification via
  * request and response.
+ * 用于基于Web的主题解析策略的接口,允许通过请求进行主题解析和通过请求及响应修改主题。
  *
  * <p>This interface allows for implementations based on session,
  * cookies, etc. The default implementation is
  * {@link org.springframework.web.servlet.theme.FixedThemeResolver},
  * simply using a configured default theme.
  *
+ * <p>此接口允许基于会话、Cookie等的实现。默认实现是
+ * {@link org.springframework.web.servlet.theme.FixedThemeResolver},
+ * 仅使用一个配置的默认主题。
+ *
  * <p>Note that this resolver is only responsible for determining the
  * current theme name. The Theme instance for the resolved theme name
  * gets looked up by DispatcherServlet via the respective ThemeSource,
  * i.e. the current WebApplicationContext.
  *
+ * <p>注意,此解析器仅负责确定当前主题名称。已解析主题名称的主题实例由DispatcherServlet通过各自的ThemeSource获得,即当前WebApplicationContext。
+ *
  * <p>Use {@link org.springframework.web.servlet.support.RequestContext#getTheme()}
  * to retrieve the current theme in controllers or views, independent
  * of the actual resolution strategy.
+ * <p>使用{@link org.springframework.web.servlet.support.RequestContext#getTheme()}
+ * 可以在控制器或视图中检索当前主题,独立于实际的解析策略。
  *
  * @author Jean-Pierre Pawlak
  * @author Juergen Hoeller

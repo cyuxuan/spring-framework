@@ -23,24 +23,40 @@ import org.springframework.lang.Nullable;
 
 /**
  * MVC framework SPI, allowing parameterization of the core MVC workflow.
+ * MVC框架的服务提供接口,允许参数化核心MVC工作流程。
  *
  * <p>Interface that must be implemented for each handler type to handle a request.
  * This interface is used to allow the {@link DispatcherServlet} to be indefinitely
  * extensible. The {@code DispatcherServlet} accesses all installed handlers through
  * this interface, meaning that it does not contain code specific to any handler type.
  *
+ * <p>必须为每个处理程序类型实现的接口,以处理请求。
+ * 此接口用于允许{@link DispatcherServlet}无限地可扩展。
+ * {@code DispatcherServlet}通过此接口访问所有安装的处理程序,这意味着它不包含任何特定于处理程序类型的代码。
+ *
+ *
  * <p>Note that a handler can be of type {@code Object}. This is to enable
  * handlers from other frameworks to be integrated with this framework without
  * custom coding, as well as to allow for annotation-driven handler objects that
  * do not obey any specific Java interface.
  *
+ * <p>注意,一个处理程序可以是{@code Object}类型的。
+ * 这是为了使其他框架的处理程序能够与此框架集成而无需自定义编码,以及允许遵循任何特定Java接口的基于注解的处理程序对象。
+ *
+ *
  * <p>This interface is not intended for application developers. It is available
  * to handlers who want to develop their own web workflow.
+ *
+ * <p>此接口不是针对应用程序开发人员的。它可用于希望开发自己web工作流的处理程序。
  *
  * <p>Note: {@code HandlerAdapter} implementors may implement the {@link
  * org.springframework.core.Ordered} interface to be able to specify a sorting
  * order (and thus a priority) for getting applied by the {@code DispatcherServlet}.
- * Non-Ordered instances get treated as lowest priority.
+ * Non-Ordered instances get treated as the lowest priority.
+ *
+ * <p>注意:{@code HandlerAdapter} 实现可以实现{@link org.springframework.core.Ordered}接口,
+ * 以便能够指定排序顺序(从而优先级),以供{@code DispatcherServlet}应用。
+ * 非Ordered实例被视为最低优先级。
  *
  * @author Rod Johnson
  * @author Juergen Hoeller
